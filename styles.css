@@ -23,6 +23,10 @@ body{
 .sidebar{
     grid-area: sidebar;
     background-color: #4338ca;
+
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+
 }
 
 .header{
@@ -33,4 +37,22 @@ body{
 .main{
     grid-area: main;
     background-color: #e0e7ff;
+}
+
+.logo-image{
+    width: 250px;
+
+    mix-blend-mode: multiply;
+    filter: drop-shadow(0px 20px 2px red) invert(100%);
+}
+
+.main-links{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-img{
+    object-fit: contain;
+    width: 25px;
+    margin: 25px;
 }
