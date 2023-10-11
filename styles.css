@@ -26,12 +26,27 @@ body{
 
     display: grid;
     grid-template-rows: auto 1fr 1fr;
-    gap: 10px;
+    gap: 15px;
 }
 
 .header{
     grid-area: header;
     background-color: #818cf8;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+.header > div{
+    margin: 10px;
+
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.header > div > *{
+    margin-right: 10px;
 }
 
 .main{
@@ -42,8 +57,8 @@ body{
 .logo-image{
     width: 250px;
 
-    mix-blend-mode:luminosity;
-    filter: drop-shadow(0px 20px 2px red) invert(100%);
+    mix-blend-mode:exclusion;
+    filter:contrast(200px);
 }
 
 .main-links, .secondary-links{
@@ -55,4 +70,21 @@ body{
     object-fit: contain;
     width: 25px;
     margin: 25px;
+}
+
+.header-img{
+    object-fit: contain;
+    width: 25px;
+}
+
+.header-input{
+    width: 330px;
+    border: none;
+    border-radius: 60px;
+    padding: 5px;
+}
+
+.main-img:hover{
+    mix-blend-mode:luminosity;
+    filter: contrast(0);
 }
