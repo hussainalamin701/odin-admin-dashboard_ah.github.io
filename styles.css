@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body{
@@ -40,13 +41,6 @@ body{
 
 .header > div{
     margin: 10px;
-
-    display: flex;
-    justify-content:space-evenly;
-}
-
-.header > div > *{
-    margin-right: 10px;
 }
 
 .main{
@@ -78,13 +72,32 @@ body{
 }
 
 .header-input{
-    width: 330px;
+    width: 530px;
     border: none;
     border-radius: 60px;
-    padding: 5px;
+    padding: 2px;
 }
 
 .main-img:hover{
     mix-blend-mode:luminosity;
     filter: contrast(0);
+}
+
+.section-one-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-two-header{
+    grid-row: 2/2;
+
+}
+
+.section-two-header > *{
+    padding: 0;
+    margin: 0;
+}
+
+.icon-img{
+    width: 40px;
 }
