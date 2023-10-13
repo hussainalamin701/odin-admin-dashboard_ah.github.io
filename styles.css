@@ -1,103 +1,32 @@
-*{
-    box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
 body{
-    background-color: rgb(207, 203, 203);
-    margin: 0;
-    padding: 0;
-}
-
-.grid-container{
-    display: grid;
-
-   grid-template-rows:  100px 605px;
-   grid-template-columns: 1fr 5fr;
-   grid-template-areas: 
-   'sidebar header'
-   'sidebar main';
-
-   border: 2px solid black;
-}
-
-.sidebar{
-    grid-area: sidebar;
-    background-color: #4338ca;
-
-    display: grid;
-    grid-template-rows: auto 1fr 1fr;
-    gap: 15px;
-}
-
-.header{
+    width:100vw;
+    height:100vh;
+    
+    display:grid;
+    grid-template-columns:1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas:
+      "sidebar header"
+      "sidebar main";
+    
+    background-color: lightgray;
+    
+    margin:0;
+    padding:0;
+  }
+  
+  header{
     grid-area: header;
-    background-color: #818cf8;
-
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 2fr;
-}
-
-.header > div{
-    margin: 10px;
-}
-
-.main{
+  }
+  
+  aside{
+    grid-area: sidebar; 
+    grid-row:1/-1;
+    background-color: gray;
+  }
+  
+  main{
     grid-area: main;
-    background-color: #e0e7ff;
-}
-
-.logo-image{
-    width: 250px;
-
-    mix-blend-mode:exclusion;
-    filter:contrast(200px);
-}
-
-.main-links, .secondary-links{
-    display: flex;
-    flex-direction: column;
-}
-
-.main-img{
-    object-fit: contain;
-    width: 25px;
-    margin: 25px;
-}
-
-.header-img{
-    object-fit: contain;
-    width: 25px;
-}
-
-.header-input{
-    width: 530px;
-    border: none;
-    border-radius: 60px;
-    padding: 2px;
-}
-
-.main-img:hover{
-    mix-blend-mode:luminosity;
-    filter: contrast(0);
-}
-
-.section-one-header{
-    display: flex;
-    justify-content: space-between;
-}
-
-.section-two-header{
-    grid-row: 2/2;
-
-}
-
-.section-two-header > *{
-    padding: 0;
-    margin: 0;
-}
-
-.icon-img{
-    width: 40px;
-}
+    grid-row: -2/-1;
+    background-color: white;
+  }
