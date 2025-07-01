@@ -9,13 +9,58 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>header</h1>  
-    </header>
-      
+          
     <aside>
-        <h1>sidebar</h1>
+        <h2 class="dashboard-header">
+            Dashboard
+        </h2>
+        <nav>
+            <ul>
+                <li id="home">Home</li>
+                <li id="profile">Profile</li>
+                <li id="messages">Messages</li>
+                <li id="history">History</li>
+                <li id="tasks">Tasks</li>
+                <li id="communities">Communities</li>
+            </ul>
+        </nav>
+
+        <nav class="nav-footer">
+            <ul>
+                <li id="settings">Settings</li>
+                <li id="support">Support</li>
+                <li id="privacy">Privacy</li>
+            </ul>
+        </nav>
     </aside>
+
+    <header>
+        <div class="search-bar">
+            <img src="images/magnify.svg" alt="Search Icon" width="24" height="24" />
+            <input type="search" id="search" name="search" class="search">
+
+            <div class="notifs">
+                <img src="./images/bell.png" alt="Bell Icon" width="24" height="24" />
+                <img src="./images/account.png" alt="Account Icon" width="30" height="30" />
+                <p>nameless</p>
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <div class="profile-footer">
+                <img src="./images/account.png" alt="Account Icon" width="54" height="54" />
+                <div class="messages">
+                    <div class="greeting">Hello there,</div>
+                    <div class="username">nameless (@nameless)</div>
+                </div>
+            </div>
+            <ul class="profile-options">
+                <li>New</li>
+                <li>Upload</li>
+                <li>Share</li>
+            </ul>
+        </div>
+    </header>
       
     <main>
         <h1>main</h1>
