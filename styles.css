@@ -2,10 +2,15 @@
 
 :root {
   --blue-color: rgb(39, 148, 221);
+  --light-blue-color: rgb(171, 221, 255);
+  --light-gray-color: rgb(242, 246, 248);
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
   font-size: 20px;
   line-height: 1.5;
   width: 100vw;
@@ -17,110 +22,129 @@ body {
   grid-template-areas:
     "sidebar header"
     "sidebar main";
+}
 
-  background-color: lightgray;
+/* Header */
+header {
+  grid-area: header;
+  padding: 12px 25px 12px 25px;
+  background-color: var(--light-blue-color);
+}
 
+.search-bar {
+  display: grid;
+  grid-template-columns: 30px 7fr 3fr;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.bottom-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.profile-footer {
+  display: grid;
+  grid-template-columns: 66px 250px;
+  align-items: center;
+}
+
+.profile-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-self: end;
+  gap: 24px;
+}
+
+.profile-options li {
+  text-align: center;
+  background-color: var(--blue-color);
+  padding: 10px;
+  border-radius: 28px;
+  color: white;
+}
+
+.username {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.notifs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.search {
+  border: none;
+  border-radius: 24px;
+  height: 24px;
+  width: 80%;
+  margin-left: 10px;
+  margin-right: 40px;
+}
+
+/* Sidebar */
+aside {
+  display: grid;
+  grid-area: sidebar;
+  grid-template-rows: 80px 300px 180px;
+  padding: 20px;
+  background-color: var(--blue-color);
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.15);
+}
+
+ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+ul li {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
-  /*CSS -> Header*/
-  header{
-    grid-area: header;
-    padding: 12px 25px;
-    padding-right: 44px;
-  }
+.dashboard-header {
+  text-align: center;
+  font-weight: bolder;
+  margin: 4px;
+}
 
-  .search-bar{
-    display: grid;
-    grid-template-columns: 30px 7fr 3fr;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 20px;
-    
-  }
+/* Main */
+main {
+  grid-area: main;
+  background-color: var(--light-gray-color);
+}
 
-  .bottom-bar{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-  }
-  
-  .profile-footer{
-    display: grid;
-    grid-template-columns: 66px 250px;
-    align-items: center;
-  }
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  gap: 24px;
+  padding: 48px;
+  margin-bottom: 50px;
+}
 
-  .profile-options{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    justify-self: end;
-    gap: 24px;
-  }
+.card {
+  display: grid;
+  gap: 6px;
+  padding: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border-left: 10px solid var(--light-blue-color);
+  border-right: 10px solid var(--light-blue-color);
+}
 
-  .profile-options li{
-    text-align: center;
-    background-color: var(--blue-color);
-    padding: 10px;
-    border-radius: 28px;
-    
-    color: white;
-  }
-
-  .username{
-    font-size: 20px;
-    font-weight: 700;
-  }
-
-  .notifs{
-    display: grid;
-    grid-template-columns: 1fr 1fr 3fr;
-    align-items: center;
-    justify-items: center;
-  }
-
-  .search{
-    border: none;
-    border-radius: 24px;
-    height: 24px;
-    width: 80%;
-    margin-left: 10px;
-    margin-right: 40px;
-  }
-  
-  /*CSS -> Sidebar*/
-  aside{
-    display: grid;
-    grid-area: sidebar;
-    grid-template-rows: 80px 300px 180px;
-    grid-row:1/-1;
-    padding: 20px;
-    background-color: gray;
-  }
-
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  ul li {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .dashboard-header{
-    text-align: center;
-    font-weight: bolder;
-    margin:4px;
-  }
-  
-  /*CSS -> Main*/
-  main{
-    grid-area: main;
-    grid-row: -2/-1;
-    background-color: white;
-  }
+.icon-rows {
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+  padding: 4px;
+  margin: 4px;
+}
