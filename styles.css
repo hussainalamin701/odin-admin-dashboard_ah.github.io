@@ -119,27 +119,38 @@ ul li {
 main {
   grid-area: main;
   background-color: var(--light-gray-color);
+
+  display: grid;
+  grid-template-columns: 7fr 3fr;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  gap: 30px;
   padding: 48px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .card {
-  display: grid;
-  gap: 6px;
-  padding: 16px;
+  width: 200px;
+  height: 200px;
   background-color: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  border-left: 10px solid var(--light-blue-color);
-  border-right: 10px solid var(--light-blue-color);
+  border-radius: 8px;
+  font-size: 14px;
+  border-left: 6px solid var(--light-blue-color);
+  border-right: 6px solid var(--light-blue-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 12px;
 }
+
 
 .icon-rows {
   display: flex;
@@ -147,4 +158,22 @@ main {
   gap: 24px;
   padding: 4px;
   margin: 4px;
+}
+
+.news-container{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+.anoun-content{
+  display: block;
+  background-color: #fff;
+
+  font-size: 12px;
+  padding: 16px;
+  border-radius: 20px;
+
+  justify-items: center;
+  gap: 1rem;
 }
